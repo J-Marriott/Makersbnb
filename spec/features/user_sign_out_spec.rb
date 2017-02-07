@@ -7,4 +7,8 @@ feature 'User can sign out' do
     click_on 'sign out'
     expect(page).to have_content "Welcome to Makers BnB"
   end
+  scenario 'sign out button not available if user not logged in' do
+    visit '/'
+    expect(page).to_not have_content 'sign out'
+  end
 end
