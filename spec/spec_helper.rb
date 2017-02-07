@@ -18,6 +18,7 @@ require 'capybara/rspec'
 require 'rspec'
 require 'capybara/poltergeist'
 require 'database_cleaner'
+require_relative 'features/web_helper'
 
 Capybara.default_driver = :poltergeist
 Capybara.app = Makersbnb

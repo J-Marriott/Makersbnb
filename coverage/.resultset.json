@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/DOE/Projects/week6/Makersbnb/app/app.rb": [
+      "/Users/Jaycee/Dropbox/makers/wk6/Makersbnb/app/app.rb": [
         1,
         null,
         1,
@@ -14,24 +14,46 @@
         1,
         1,
         1,
+        1,
+        17,
+        null,
+        1,
+        4,
+        null,
+        null,
         1,
         5,
         null,
+        null,
         1,
+        5,
+        5,
+        3,
+        3,
+        null,
+        null,
+        2,
+        null,
+        null,
+        null,
         1,
+        5,
         null,
         null,
         1,
         3,
-        null,
-        null,
-        1,
         3,
+        1,
+        1,
+        null,
+        null,
+        2,
+        null,
         null,
         null,
         null
       ],
-      "/Users/DOE/Projects/week6/Makersbnb/app/data_mapper_setup.rb": [
+      "/Users/Jaycee/Dropbox/makers/wk6/Makersbnb/app/data_mapper_setup.rb": [
         1,
         1,
         1,
@@ -44,7 +66,7 @@
         1,
         1
       ],
-      "/Users/DOE/Projects/week6/Makersbnb/app/models/user.rb": [
+      "/Users/Jaycee/Dropbox/makers/wk6/Makersbnb/app/models/user.rb": [
         1,
         1,
         null,
@@ -63,6 +85,11 @@
         null,
         1,
         1,
+        null,
+        1,
+        5,
+        5,
+        null,
         null,
         1,
         3,
@@ -72,11 +99,6 @@
         1,
         0,
         0,
-        null,
-        null,
-        1,
-        0,
-        0,
         0,
         null,
         null,
@@ -87,7 +109,7 @@
         null,
         null
       ],
-      "/Users/DOE/Projects/week6/Makersbnb/app/models/space.rb": [
+      "/Users/Jaycee/Dropbox/makers/wk6/Makersbnb/app/models/space.rb": [
         1,
         1,
         null,
@@ -109,7 +131,7 @@
         null,
         null
       ],
-      "/Users/DOE/Projects/week6/Makersbnb/app/models/request.rb": [
+      "/Users/Jaycee/Dropbox/makers/wk6/Makersbnb/app/models/request.rb": [
         1,
         1,
         null,
@@ -122,7 +144,7 @@
         null,
         null
       ],
-      "/Users/DOE/Projects/week6/Makersbnb/app/models/booking.rb": [
+      "/Users/Jaycee/Dropbox/makers/wk6/Makersbnb/app/models/booking.rb": [
         1,
         1,
         null,
@@ -134,7 +156,28 @@
         null,
         null
       ],
-      "/Users/DOE/Projects/week6/Makersbnb/spec/features/homepage_spec.rb": [
+      "/Users/Jaycee/Dropbox/makers/wk6/Makersbnb/spec/features/web_helper.rb": [
+        1,
+        null,
+        null,
+        null,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        null,
+        null,
+        1,
+        null,
+        3,
+        3,
+        3,
+        3,
+        null
+      ],
+      "/Users/Jaycee/Dropbox/makers/wk6/Makersbnb/spec/features/homepage_spec.rb": [
         1,
         null,
         1,
@@ -144,7 +187,30 @@
         null,
         null
       ],
-      "/Users/DOE/Projects/week6/Makersbnb/spec/features/user_sign_up_spec.rb": [
+      "/Users/Jaycee/Dropbox/makers/wk6/Makersbnb/spec/features/user_sign_in_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/Jaycee/Dropbox/makers/wk6/Makersbnb/spec/features/user_sign_up_spec.rb": [
         1,
         null,
         1,
@@ -184,6 +250,6 @@
         null
       ]
     },
-    "timestamp": 1486481385
+    "timestamp": 1486484499
   }
 }
