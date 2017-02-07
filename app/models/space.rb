@@ -6,12 +6,15 @@ class Space
   property :name, String, required: true
   property :description, String, required: true, length: 255
   property :price, Integer, required: true
+  property :available_start_date, Date
+  property :available_end_date, Date
   has n, :requests
 
 
-
 =begin sort this
-  property :available_dates
   has n, :available_dates
 =end
 end
+
+
+

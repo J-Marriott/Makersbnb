@@ -12,7 +12,7 @@ class Makersbnb < Sinatra::Base
   set :views, File.dirname(__FILE__) + '/views'
 
   get '/' do
-    'Hello Makersbnb!'
+    erb :homepage
   end
 
   # start the server if ruby file executed directly
