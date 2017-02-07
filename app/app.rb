@@ -14,8 +14,7 @@ class Makersbnb < Sinatra::Base
   set :views, Proc.new {File.join(root, "views")}
 
   get '/' do
-    #"Welcome to Makers BnB"
-    erb :'homepage'
+    erb :homepage
   end
 
 end
