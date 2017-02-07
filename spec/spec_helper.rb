@@ -19,7 +19,7 @@ require 'rspec'
 require 'capybara/poltergeist'
 require 'database_cleaner'
 
-Capybara.javascript_driver = :poltergeist
+Capybara.default_driver = :poltergeist
 Capybara.app = Makersbnb
 
 
@@ -41,8 +41,10 @@ Capybara.app = Makersbnb
 # users commonly want.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+
 RSpec.configure do |config|
 
+=begin
    config.before(:suite) do
     DatabaseCleaner.strategy = :transaction
     DatabaseCleaner.clean_with(:truncation)
@@ -53,6 +55,7 @@ RSpec.configure do |config|
       example.run
     end
   end
+=end
 
   config.include Capybara::DSL
   # rspec-expectations config goes here. You can use an alternate
