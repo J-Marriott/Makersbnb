@@ -44,7 +44,7 @@ Capybara.app = Makersbnb
 
 RSpec.configure do |config|
 
-=begin
+
    config.before(:suite) do
     DatabaseCleaner.strategy = :transaction
     DatabaseCleaner.clean_with(:truncation)
@@ -55,7 +55,7 @@ RSpec.configure do |config|
       example.run
     end
   end
-=end
+
 
   config.include Capybara::DSL
   # rspec-expectations config goes here. You can use an alternate
