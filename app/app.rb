@@ -10,6 +10,7 @@ class Makersbnb < Sinatra::Base
   enable :sessions
   set :session_secret, 'super secret'
   register Sinatra::Flash
+  use Rack::MethodOverride
   set :root, File.dirname(__FILE__) + ''
   set :views, Proc.new {File.join(root, "views")}
 
@@ -32,6 +33,10 @@ class Makersbnb < Sinatra::Base
    end
   end
 
+  get '/spaces' do
+    erb :'spaces/index'
+  end
+
   get '/sessions/new' do
   	erb :'sessions/new'
   end
@@ -45,6 +50,11 @@ class Makersbnb < Sinatra::Base
      #flash.now[:errors] = ['The email or password is incorrect']
     redirect to ('/sessions/new')
    end
+  end
+
+  delete '/sessions' do
+    session[:user_id] = nil
+    redirect '/'
   end
 
 end

@@ -4,6 +4,10 @@
     <title>Makers BnB</title>
   </head>
   <body>
+    <form method='post' action='/sessions'>
+      <input type="hidden" name="_method" value="delete">
+      <input type="submit" name='sign out' value="sign out">
+    </form>
     <%= yield %>
   </body>
 </html>
