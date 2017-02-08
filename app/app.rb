@@ -10,6 +10,7 @@ class Makersbnb < Sinatra::Base
   enable :sessions
   set :session_secret, 'super secret'
   register Sinatra::Flash
+  use Rack::MethodOverride
   set :root, File.dirname(__FILE__) + ''
   set :views, Proc.new {File.join(root, "views")}
 
@@ -33,9 +34,28 @@ class Makersbnb < Sinatra::Base
    end
   end
 
+  get '/spaces' do
+    erb :'spaces/index'
+  end
+
+  get '/spaces/new' do
+    erb :'spaces/new'
+  end
+
+  post '/spaces' do
+    space = Space.new(name: params[:name], description: params[:description], price: params[:price], available_start_date: params[:available_start_date], available_end_date: params[:available_end_date], user_id: session[:user_id])
+    if space.save
+      redirect '/spaces'
+    else
+      redirect '/spaces/new'
+    end
+  end
+
   get '/sessions/new' do
   	erb :'sessions/new'
   end
+
+
 
   post '/sessions' do
   	user = User.authenticate(params[:email], params[:password])
@@ -52,8 +72,8 @@ class Makersbnb < Sinatra::Base
     session[:user_id] = nil
     redirect '/'
   end
-
-  get '/spaces' do
+  
+   get '/spaces' do
   @spaces = Space.all
   erb :'spaces/index'
   end

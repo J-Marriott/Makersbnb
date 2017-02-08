@@ -10,11 +10,4 @@ class Space
   property :available_end_date, Date
   has n, :requests
 
-
-=begin sort this
-  has n, :available_dates
-=end
 end
-
-
-

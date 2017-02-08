@@ -4,6 +4,12 @@
     <title>Makers BnB</title>
   </head>
   <body>
+    <% if session[:user_id] %>
+      <form method='post' action='/sessions'>
+        <input type="hidden" name="_method" value="delete">
+        <input type="submit" name='sign out' value="sign out">
+      </form>
+    <% end %>
     <%= yield %>
   </body>
 </html>
