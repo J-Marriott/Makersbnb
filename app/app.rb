@@ -42,9 +42,12 @@ class Makersbnb < Sinatra::Base
   end
 
   post '/spaces' do
-    Space.create(name: params[:name], description: params[:description], price: params[:price], available_start_date: params[:available_start_date], available_end_date: params[:available_end_date], user_id: session[:user_id])
-    
-    redirect '/'
+    space = Space.new(name: params[:name], description: params[:description], price: params[:price], available_start_date: params[:available_start_date], available_end_date: params[:available_end_date], user_id: session[:user_id])
+    if space.save
+      redirect '/spaces'
+    else
+      redirect '/spaces/new'
+    end
   end
 
   get '/sessions/new' do
