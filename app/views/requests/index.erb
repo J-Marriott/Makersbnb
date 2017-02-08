@@ -1,0 +1,9 @@
+<ul id='requests'>
+<%if @requests%>
+  <% @requests.each do |request| %>
+    <li>	<%= request.check_in_date %>
+        	<%= request.check_out_date%>
+    </li>
+  <% end %>
+  <% end%>
+</ul>

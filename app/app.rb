@@ -71,4 +71,10 @@ class Makersbnb < Sinatra::Base
     @spaces = Space.all
     erb :'spaces/index'
   end
+
+  get '/requests' do
+    @requests = Request.all
+    p @requests
+    erb :'requests/index'
+  end
 end
