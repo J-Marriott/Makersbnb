@@ -34,10 +34,6 @@ class Makersbnb < Sinatra::Base
    end
   end
 
-  get '/spaces' do
-    erb :'spaces/index'
-  end
-
   get '/spaces/new' do
     erb :'spaces/new'
   end
@@ -72,7 +68,7 @@ class Makersbnb < Sinatra::Base
     session[:user_id] = nil
     redirect '/'
   end
-  
+
    get '/spaces' do
   @spaces = Space.all
   erb :'spaces/index'
