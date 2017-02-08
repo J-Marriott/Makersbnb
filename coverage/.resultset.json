@@ -15,7 +15,7 @@
         1,
         1,
         1,
-        17,
+        19,
         null,
         1,
         4,
@@ -49,6 +49,12 @@
         null,
         2,
         null,
+        null,
+        null,
+        1,
+        2,
+        2,
+        2,
         null,
         null,
         null
@@ -177,6 +183,19 @@
         3,
         null
       ],
+      "/Users/Jaycee/Dropbox/makers/wk6/Makersbnb/spec/features/display_list_spaces_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/Jaycee/Dropbox/makers/wk6/Makersbnb/spec/features/homepage_spec.rb": [
         1,
         null,
@@ -250,6 +269,6 @@
         null
       ]
     },
-    "timestamp": 1486484499
+    "timestamp": 1486552861
   }
 }
