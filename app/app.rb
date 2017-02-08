@@ -73,8 +73,12 @@ class Makersbnb < Sinatra::Base
   end
 
   get '/requests' do
-    @requests = Request.all
-    p @requests
+    @userspaces = Space.all(user_id: session[:user_id])
+    @pendingrequests = []
+    @userspaces.each do |userspace|
+      @pendingrequests << userspace.requests
+    end
     erb :'requests/index'
   end
+
 end
