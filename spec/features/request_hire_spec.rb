@@ -6,7 +6,9 @@ feature 'hire space request' do
     sign_in
     list_space
     visit ('/spaces')
-    click_link('Bob\'s villa')
-    expect(page).to have_current_path('/requests/1')
+    click_link('Bob\'s villa','A lovely villa')
+    expect(page).to have_current_path('/spaces/1')
   end
+
+
 end
