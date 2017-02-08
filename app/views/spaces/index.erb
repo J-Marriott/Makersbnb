@@ -1,0 +1,9 @@
+<ul id='spaces'>
+<%if @spaces%>
+  <% @spaces.each do |space| %>
+    <li>	<%= space.name %>
+        	<%=space.description%>
+    </li>
+  <% end %>
+  <% end%>
+</ul>

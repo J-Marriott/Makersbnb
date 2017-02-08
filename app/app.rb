@@ -33,9 +33,6 @@ class Makersbnb < Sinatra::Base
    end
   end
 
-  get '/spaces' do
-    erb :'spaces/index'
-  end
 
   get '/spaces/new' do
     erb :'spaces/new'
@@ -54,8 +51,6 @@ class Makersbnb < Sinatra::Base
   	erb :'sessions/new'
   end
 
-
-
   post '/sessions' do
   	user = User.authenticate(params[:email], params[:password])
   	if user
@@ -72,4 +67,8 @@ class Makersbnb < Sinatra::Base
     redirect '/'
   end
 
+  get '/spaces' do
+    @spaces = Space.all
+    erb :'spaces/index'
+  end
 end
