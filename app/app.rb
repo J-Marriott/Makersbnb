@@ -22,6 +22,7 @@ class Makersbnb < Sinatra::Base
   	erb :'users/new'
   end
 
+
   post '/users' do
   	user = User.create(name: params[:name], email: params[:email], password: params[:password], password_confirmation: params[:password_confirmation])
   	if user.save
@@ -70,6 +71,11 @@ class Makersbnb < Sinatra::Base
   delete '/sessions' do
     session[:user_id] = nil
     redirect '/'
+  end
+  
+   get '/spaces' do
+  @spaces = Space.all
+  erb :'spaces/index'
   end
 
 end
