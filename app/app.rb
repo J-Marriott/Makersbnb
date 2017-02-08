@@ -49,7 +49,6 @@ class Makersbnb < Sinatra::Base
 
   get '/spaces' do
   @spaces = Space.all
-  p Space.all
   erb :'spaces/index'
   end
 
