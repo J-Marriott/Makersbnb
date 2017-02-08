@@ -1,0 +1,9 @@
+<form action="/requests" method="post">
+  <label for="check_in_date">Check in date</label>
+  <input type="date" name="check_in_date">
+  <label for="check_out_date">Check out date</label>
+  <input type="date" name="check_out_date">
+  <input type="hidden" value="<%=@space.id%>" name="space_id">
+  <input type="hidden" value="<%=@user%>" name="user_id">
+  <input type="submit" name="confirm" value="Confirm">
+</form>

@@ -52,7 +52,6 @@ class Makersbnb < Sinatra::Base
   end
 
 
-
   post '/sessions' do
   	user = User.authenticate(params[:email], params[:password])
   	if user
@@ -72,6 +71,20 @@ class Makersbnb < Sinatra::Base
    get '/spaces' do
   @spaces = Space.all
   erb :'spaces/index'
+  end
+
+  get '/spaces/:id' do
+    @space = Space.first(:id => params[:id])
+    @user = session[:user_id]
+    p @space
+    p @user
+    erb :'requests/new'
+  end
+
+  post '/requests' do
+    p params
+  request = Request.create(space_id: params[:space_id], check_in_date: params[:check_in_date], check_out_date: params[:check_out_date], request_status: 'pending', user_id: params[:user_id])
+  request.save
   end
 
 end
