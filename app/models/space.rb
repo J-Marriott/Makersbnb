@@ -9,5 +9,6 @@ class Space
   property :available_start_date, Date
   property :available_end_date, Date
   has n, :requests
+  has n, :bookings
 
 end
