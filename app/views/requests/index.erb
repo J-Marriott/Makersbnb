@@ -3,6 +3,10 @@
   <% @requests.each do |request| %>
     <li>	<%= request.check_in_date %>
         	<%= request.check_out_date%>
+          <%  space = Space.get(request.space_id) %>
+          <%= space.name %>
+          <%  hirer = User.get(request.user_id) %>
+          <%=  hirer.name %>
     </li>
   <% end %>
   <% end%>

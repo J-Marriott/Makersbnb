@@ -8,7 +8,8 @@ feature 'display a list of spaces' do
     p request
     visit '/requests'
     expect(page).to have_content '2017-11-19'
+    expect(page).to have_content '2017-11-21'
     expect(page).to have_content 'Vintage London flat'
-
+    expect(page).to have_content 'Bob'
   end
 end
