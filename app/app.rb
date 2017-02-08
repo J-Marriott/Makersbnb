@@ -37,9 +37,21 @@ class Makersbnb < Sinatra::Base
     erb :'spaces/index'
   end
 
+  get '/spaces/new' do
+    erb :'spaces/new'
+  end
+
+  post '/spaces' do
+    Space.create(name: params[:name], description: params[:description], price: params[:price], available_start_date: params[:available_start_date], available_end_date: params[:available_end_date], user_id: session[:user_id])
+    
+    redirect '/'
+  end
+
   get '/sessions/new' do
   	erb :'sessions/new'
   end
+
+
 
   post '/sessions' do
   	user = User.authenticate(params[:email], params[:password])
