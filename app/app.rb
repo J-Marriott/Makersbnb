@@ -48,20 +48,16 @@ class Makersbnb < Sinatra::Base
   end
 
   post '/spaces/filter' do
-    @first_night= params[:first_night]
-    @last_night= params[:last_night]
+    @first_night, @last_night= params[:first_night], params[:last_night]
     guest_date_range = [*@first_night.to_s..@last_night.to_s]
     @spaces = Space.all(:available_start_date.lt => @first_night, :available_end_date.gt => @last_night)
     request_date_range = []
     @spaces.each { |space|
-        space_id = space.id
-        requests = Request.all(space_id: space_id)
-        requests.each { |request| 
+        requests = Request.all(space_id: space.id)
+        requests.each { |request|
         request_date_range << [*request.check_in_date.to_s..request.check_out_date.to_s] }
         @spaces.delete(space) if !(request_date_range.flatten & guest_date_range).empty?
     }
-   
-
     erb :'spaces/index'
   end
 
