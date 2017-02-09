@@ -81,4 +81,12 @@ class Makersbnb < Sinatra::Base
     erb :'requests/index'
   end
 
+  post '/booking' do
+    # p params[:requestid]
+    @request = Request.get(params[:requestid])
+    p @request
+    # Booking.create(user_id: @request.user_id, space_id: @request.space_id, check_in_date: @request.check_in_date, check_out_date: @request.check_out_date)
+    redirect '/requests'
+  end
+
 end

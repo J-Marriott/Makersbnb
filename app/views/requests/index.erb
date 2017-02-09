@@ -3,12 +3,21 @@
 <%if @pendingrequests %>
   <% @pendingrequests.each do |singlerequest| %>
   <% singlerequest.each do |request| %>
-    <li>	<%= request.check_in_date %>
+
+    <li>	<%= request.id %>
+          <%= request.check_in_date %>
         	<%= request.check_out_date%>
           <%  space = Space.get(request.space_id) %>
           <%= space.name %>
           <%  hirer = User.get(request.user_id) %>
           <%=  hirer.name %> <br>
+
+          <!-- <a href='/booking/?requestid=<%=request.id%>'>Confirm</a> -->
+
+          <form action='/booking' method='post'>
+            <input type='hidden' name='requestid' value='<%= request.id%>'>
+            <input type='submit' name='submit' value="submit">
+          </form>
     </li>
     <% end %>
   <% end %>
