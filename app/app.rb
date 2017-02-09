@@ -58,9 +58,7 @@ class Makersbnb < Sinatra::Base
         requests = Request.all(space_id: space_id)
         requests.each { |request| 
         request_date_range << [*request.check_in_date.to_s..request.check_out_date.to_s] }
-        p (request_date_range.flatten & guest_date_range).empty?
-
-        #@spaces.delete(space) if guest_date_range.include?(request_date_range.flatten)
+        @spaces.delete(space) if !(request_date_range.flatten & guest_date_range).empty?
     }
    
 
