@@ -12,9 +12,9 @@
           <%  hirer = User.get(request.user_id) %>
           <%=  hirer.name %> <br>
 
-          <!-- <a href='/booking/?requestid=<%=request.id%>'>Confirm</a> -->
 
-          <form action='/booking' method='post'>
+
+          <form action='/bookings' method='post'>
             <input type='hidden' name='requestid' value='<%= request.id%>'>
             <input type='submit' name='submit' value="submit">
           </form>
