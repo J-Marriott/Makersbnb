@@ -22,6 +22,7 @@ class Makersbnb < Sinatra::Base
   	erb :'users/new'
   end
 
+
   post '/users' do
   	user = User.create(name: params[:name], email: params[:email], password: params[:password], password_confirmation: params[:password_confirmation])
   	if user.save
@@ -33,7 +34,10 @@ class Makersbnb < Sinatra::Base
    end
   end
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 24b9d74dd8717e23103dcb81449575ab06ab947c
   get '/spaces/new' do
     erb :'spaces/new'
   end
@@ -51,6 +55,10 @@ class Makersbnb < Sinatra::Base
   	erb :'sessions/new'
   end
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 24b9d74dd8717e23103dcb81449575ab06ab947c
   post '/sessions' do
   	user = User.authenticate(params[:email], params[:password])
   	if user
@@ -67,8 +75,30 @@ class Makersbnb < Sinatra::Base
     redirect '/'
   end
 
+<<<<<<< HEAD
   get '/spaces' do
     @spaces = Space.all
     erb :'spaces/index'
   end
+=======
+   get '/spaces' do
+  @spaces = Space.all
+  erb :'spaces/index'
+  end
+
+  get '/spaces/:id' do
+    @space = Space.first(:id => params[:id])
+    @user = session[:user_id]
+    p @space
+    p @user
+    erb :'requests/new'
+  end
+
+  post '/requests' do
+    p params
+  request = Request.create(space_id: params[:space_id], check_in_date: params[:check_in_date], check_out_date: params[:check_out_date], request_status: 'pending', user_id: params[:user_id])
+  request.save
+  end
+
+>>>>>>> 24b9d74dd8717e23103dcb81449575ab06ab947c
 end

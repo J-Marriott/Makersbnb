@@ -1,7 +1,11 @@
 {
   "RSpec": {
     "coverage": {
+<<<<<<< HEAD
       "/Users/Jaycee/Dropbox/makers/wk6/Makersbnb/app/app.rb": [
+=======
+      "/Users/Mazza/Projects/makersbnbmaster/Makersbnb/app/app.rb": [
+>>>>>>> 24b9d74dd8717e23103dcb81449575ab06ab947c
         1,
         null,
         1,
@@ -26,6 +30,7 @@
         8,
         null,
         null,
+        null,
         1,
         8,
         8,
@@ -37,7 +42,10 @@
         null,
         null,
         null,
+<<<<<<< HEAD
         null,
+=======
+>>>>>>> 24b9d74dd8717e23103dcb81449575ab06ab947c
         1,
         7,
         null,
@@ -75,9 +83,16 @@
         7,
         7,
         null,
+<<<<<<< HEAD
         null
       ],
       "/Users/Jaycee/Dropbox/makers/wk6/Makersbnb/app/data_mapper_setup.rb": [
+=======
+        null,
+        null
+      ],
+      "/Users/Mazza/Projects/makersbnbmaster/Makersbnb/app/data_mapper_setup.rb": [
+>>>>>>> 24b9d74dd8717e23103dcb81449575ab06ab947c
         1,
         1,
         1,
@@ -90,7 +105,11 @@
         1,
         1
       ],
+<<<<<<< HEAD
       "/Users/Jaycee/Dropbox/makers/wk6/Makersbnb/app/models/user.rb": [
+=======
+      "/Users/Mazza/Projects/makersbnbmaster/Makersbnb/app/models/user.rb": [
+>>>>>>> 24b9d74dd8717e23103dcb81449575ab06ab947c
         1,
         1,
         null,
@@ -135,7 +154,11 @@
         null,
         null
       ],
+<<<<<<< HEAD
       "/Users/Jaycee/Dropbox/makers/wk6/Makersbnb/app/models/space.rb": [
+=======
+      "/Users/Mazza/Projects/makersbnbmaster/Makersbnb/app/models/space.rb": [
+>>>>>>> 24b9d74dd8717e23103dcb81449575ab06ab947c
         1,
         1,
         null,
@@ -151,7 +174,11 @@
         null,
         null
       ],
+<<<<<<< HEAD
       "/Users/Jaycee/Dropbox/makers/wk6/Makersbnb/app/models/request.rb": [
+=======
+      "/Users/Mazza/Projects/makersbnbmaster/Makersbnb/app/models/request.rb": [
+>>>>>>> 24b9d74dd8717e23103dcb81449575ab06ab947c
         1,
         1,
         null,
@@ -164,7 +191,11 @@
         null,
         null
       ],
+<<<<<<< HEAD
       "/Users/Jaycee/Dropbox/makers/wk6/Makersbnb/app/models/booking.rb": [
+=======
+      "/Users/Mazza/Projects/makersbnbmaster/Makersbnb/app/models/booking.rb": [
+>>>>>>> 24b9d74dd8717e23103dcb81449575ab06ab947c
         1,
         1,
         null,
@@ -176,7 +207,11 @@
         null,
         null
       ],
+<<<<<<< HEAD
       "/Users/Jaycee/Dropbox/makers/wk6/Makersbnb/spec/features/web_helper.rb": [
+=======
+      "/Users/Mazza/Projects/makersbnbmaster/Makersbnb/spec/features/web_helper.rb": [
+>>>>>>> 24b9d74dd8717e23103dcb81449575ab06ab947c
         1,
         null,
         null,
@@ -212,7 +247,35 @@
         4,
         null
       ],
+<<<<<<< HEAD
       "/Users/Jaycee/Dropbox/makers/wk6/Makersbnb/spec/features/homepage_spec.rb": [
+=======
+      "/Users/Mazza/Projects/makersbnbmaster/Makersbnb/spec/features/display_list_spaces_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/Mazza/Projects/makersbnbmaster/Makersbnb/spec/features/homepage_spec.rb": [
+>>>>>>> 24b9d74dd8717e23103dcb81449575ab06ab947c
         1,
         null,
         1,
@@ -222,7 +285,11 @@
         null,
         null
       ],
+<<<<<<< HEAD
       "/Users/Jaycee/Dropbox/makers/wk6/Makersbnb/spec/features/new_space_spec.rb": [
+=======
+      "/Users/Mazza/Projects/makersbnbmaster/Makersbnb/spec/features/new_space_spec.rb": [
+>>>>>>> 24b9d74dd8717e23103dcb81449575ab06ab947c
         1,
         null,
         1,
@@ -246,6 +313,7 @@
         null,
         null
       ],
+<<<<<<< HEAD
       "/Users/Jaycee/Dropbox/makers/wk6/Makersbnb/spec/features/space_lists_spec.rb": [
         1,
         null,
@@ -271,6 +339,9 @@
         null
       ],
       "/Users/Jaycee/Dropbox/makers/wk6/Makersbnb/spec/features/user_sign_in_spec.rb": [
+=======
+      "/Users/Mazza/Projects/makersbnbmaster/Makersbnb/spec/features/user_sign_in_spec.rb": [
+>>>>>>> 24b9d74dd8717e23103dcb81449575ab06ab947c
         1,
         null,
         1,
@@ -293,7 +364,11 @@
         null,
         null
       ],
+<<<<<<< HEAD
       "/Users/Jaycee/Dropbox/makers/wk6/Makersbnb/spec/features/user_sign_out_spec.rb": [
+=======
+      "/Users/Mazza/Projects/makersbnbmaster/Makersbnb/spec/features/user_sign_out_spec.rb": [
+>>>>>>> 24b9d74dd8717e23103dcb81449575ab06ab947c
         1,
         null,
         1,
@@ -309,7 +384,11 @@
         null,
         null
       ],
+<<<<<<< HEAD
       "/Users/Jaycee/Dropbox/makers/wk6/Makersbnb/spec/features/user_sign_up_spec.rb": [
+=======
+      "/Users/Mazza/Projects/makersbnbmaster/Makersbnb/spec/features/user_sign_up_spec.rb": [
+>>>>>>> 24b9d74dd8717e23103dcb81449575ab06ab947c
         1,
         null,
         1,
@@ -349,6 +428,10 @@
         null
       ]
     },
+<<<<<<< HEAD
     "timestamp": 1486566145
+=======
+    "timestamp": 1486563524
+>>>>>>> 24b9d74dd8717e23103dcb81449575ab06ab947c
   }
 }
