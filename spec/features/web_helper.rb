@@ -32,3 +32,9 @@ def list_space(name: 'Bob\'s villa',
   fill_in 'available_end_date', with: available_end_date
   click_button 'submit'
 end
+
+def sign_out
+    sign_up
+    sign_in
+    click_button 'sign out'
+end

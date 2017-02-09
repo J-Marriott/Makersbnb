@@ -34,10 +34,6 @@ class Makersbnb < Sinatra::Base
    end
   end
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 24b9d74dd8717e23103dcb81449575ab06ab947c
   get '/spaces/new' do
     erb :'spaces/new'
   end
@@ -55,10 +51,6 @@ class Makersbnb < Sinatra::Base
   	erb :'sessions/new'
   end
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 24b9d74dd8717e23103dcb81449575ab06ab947c
   post '/sessions' do
   	user = User.authenticate(params[:email], params[:password])
   	if user
@@ -75,12 +67,6 @@ class Makersbnb < Sinatra::Base
     redirect '/'
   end
 
-<<<<<<< HEAD
-  get '/spaces' do
-    @spaces = Space.all
-    erb :'spaces/index'
-  end
-=======
    get '/spaces' do
   @spaces = Space.all
   erb :'spaces/index'
@@ -89,16 +75,21 @@ class Makersbnb < Sinatra::Base
   get '/spaces/:id' do
     @space = Space.first(:id => params[:id])
     @user = session[:user_id]
-    p @space
-    p @user
     erb :'requests/new'
   end
 
   post '/requests' do
-    p params
-  request = Request.create(space_id: params[:space_id], check_in_date: params[:check_in_date], check_out_date: params[:check_out_date], request_status: 'pending', user_id: params[:user_id])
-  request.save
+    #flash.now[:errors] = ["Check in and check out dates are out of booking date bound"] and replace return 'p'
+    return 'p' if params[:check_in_date] < Space.first(:id=>params[:space_id]).available_start_date.to_s || params[:check_out_date] > Space.first(:id=>params[:space_id]).available_end_date.to_s
+    request = Request.create(space_id: params[:space_id], check_in_date: params[:check_in_date], check_out_date: params[:check_out_date], request_status: 'pending', user_id: params[:user_id])
+    if request.save
+      redirect('/')
+    else 
+      #flash.now[:errors] = ['The request was not created, please try again']
+      redirect('/spaces/#{params[:space_id]}')
+    end
+
   end
 
->>>>>>> 24b9d74dd8717e23103dcb81449575ab06ab947c
+
 end

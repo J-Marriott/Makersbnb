@@ -16,13 +16,47 @@ feature 'hire space request' do
     list_space(name: 'Lucy villa', description: 'A lovely villa', price: 10000, available_start_date: '19/06/2017', available_end_date: '25/06/2017')
     visit ('/spaces')
     click_link('Lucy villa A lovely villa')
-    fill_in('check_in_date', with: '20/06/2017')
-    fill_in('check_out_date', with: '21/06/2017')
+    fill_in('check_in_date', with: '2017-06-20')
+    fill_in('check_out_date', with: '2017-06-21')
     click_button('Confirm')
-    p Request.first
-    expect(Request.first.request_status).to eq('pending')
-    #expect(page).to have_content('Thankyou')
+    expect(Request.first.space_id).to eq(1)
   end
 
+    scenario 'cannot create a request if user is not logged in' do
+    sign_up
+    sign_in
+    list_space(name: 'Lucy villa', description: 'A lovely villa', price: 10000, available_start_date: '19/06/2017', available_end_date: '25/06/2017')
+    sign_out
+    visit ('/spaces')
+    click_link('Lucy villa A lovely villa')
+    fill_in('check_in_date', with: '2017-06-20')
+    fill_in('check_out_date', with: '2017-06-21')
+    click_button('Confirm')
+    expect(Request.all).to be_empty
+    end
+
+    scenario 'cannot create a request if check in and check out date are before the availability date' do
+    sign_up
+    sign_in
+    list_space(name: 'Lucy villa', description: 'A lovely villa', price: 10000, available_start_date: '19/06/2017', available_end_date: '25/06/2017')
+    visit ('/spaces')
+    click_link('Lucy villa A lovely villa')
+    fill_in('check_in_date', with: '2017-05-20')
+    fill_in('check_out_date', with: '2017-05-21')
+    click_button('Confirm')
+    expect(Request.all).to be_empty
+    end
+
+    scenario 'cannot create a request if check in and check out date after the availability date' do
+    sign_up
+    sign_in
+    list_space(name: 'Lucy villa', description: 'A lovely villa', price: 10000, available_start_date: '19/06/2017', available_end_date: '25/06/2017')
+    visit ('/spaces')
+    click_link('Lucy villa A lovely villa')
+    fill_in('check_in_date', with: '2017-07-01')
+    fill_in('check_out_date', with: '2017-07-02')
+    click_button('Confirm')
+    expect(Request.all).to be_empty
+    end
 
 end
