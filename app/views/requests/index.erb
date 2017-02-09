@@ -1,4 +1,6 @@
-<ul id='requests'>
+<div>
+<h2>Requests I've received</h2>
+<ul id='requests' class="listing">
 
 <%if @pendingrequests %>
   <% @pendingrequests.each do |singlerequest| %>
@@ -25,9 +27,34 @@
             <input type='hidden' name='requestid' value='<%= request.id%>'>
             <input type='submit' name='submit' value="Deny">
           </form>
-          
+
     </li>
     <% end %>
   <% end %>
   <% end%>
 </ul>
+</div>
+
+<div>
+<h2>Requests I've made</h2>
+<ul id='requests_made' class="listing" >
+
+<%if @requests %>
+  <% @pendingrequests.each do |singlerequest| %>
+  <% singlerequest.each do |request| %>
+
+    <li>  <%= request.id %>
+          <%= request.check_in_date %>
+          <%= request.check_out_date%>
+          <%  space = Space.get(request.space_id) %>
+          <%= space.name %>
+          <%  hirer = User.get(request.user_id) %>
+          <%=  hirer.name %> <br>
+
+    </li>
+    <% end %>
+  <% end %>
+  <% end%>
+</ul>
+</div>
+
