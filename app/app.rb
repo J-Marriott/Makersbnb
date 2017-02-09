@@ -47,6 +47,12 @@ class Makersbnb < Sinatra::Base
     end
   end
 
+  post '/spaces/filter' do
+    @first_night= params[:first_night]
+    @last_night= params[:last_night]
+    redirect '/spaces'
+  end
+
   get '/sessions/new' do
   	erb :'sessions/new'
   end
@@ -84,7 +90,7 @@ class Makersbnb < Sinatra::Base
     request = Request.create(space_id: params[:space_id], check_in_date: params[:check_in_date], check_out_date: params[:check_out_date], request_status: 'pending', user_id: params[:user_id])
     if request.save
       redirect('/')
-    else 
+    else
       #flash.now[:errors] = ['The request was not created, please try again']
       redirect('/spaces/#{params[:space_id]}')
     end
