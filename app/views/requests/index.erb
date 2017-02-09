@@ -15,9 +15,17 @@
 
 
           <form action='/bookings' method='post'>
+            <input type='hidden' name="answer" value="confirmed">
             <input type='hidden' name='requestid' value='<%= request.id%>'>
-            <input type='submit' name='submit' value="submit">
+            <input type='submit' name='submit' value="Accept">
           </form>
+
+            <form action='/bookings' method='post'>
+            <input type="hidden" name="answer" value="denied">
+            <input type='hidden' name='requestid' value='<%= request.id%>'>
+            <input type='submit' name='submit' value="Deny">
+          </form>
+          
     </li>
     <% end %>
   <% end %>

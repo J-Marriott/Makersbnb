@@ -1,13 +1,17 @@
-
-
 feature 'booking confirmation' do
   scenario 'user can confirm a booking request' do
-
     request_setup
     visit '/requests'
-    click_button 'submit'
+    click_button 'Accept'
+    expect(Request.first.request_status).to eq 'confirmed'
+    expect(page.current_path).to eq '/requests'
+  end
 
-    expect(Booking.first.check_in_date.to_s).to eq '2017-11-19'
+    scenario 'user can deny a booking request' do
+    request_setup
+    visit '/requests'
+    click_button 'Deny'
+    expect(Request.first.request_status).to eq 'denied'
     expect(page.current_path).to eq '/requests'
   end
 
