@@ -4,6 +4,8 @@ require 'sinatra'
 require 'sinatra/base'
 require 'sinatra/flash'
 require_relative 'data_mapper_setup'
+require 'mailgun'
+require_relative 'models/sms'
 
 
 class Makersbnb < Sinatra::Base
@@ -13,6 +15,7 @@ class Makersbnb < Sinatra::Base
   use Rack::MethodOverride
   set :root, File.dirname(__FILE__) + ''
   set :views, Proc.new {File.join(root, "views")}
+  include SMS
 
   get '/' do
     erb :homepage
@@ -27,6 +30,7 @@ class Makersbnb < Sinatra::Base
   	user = User.create(name: params[:name], email: params[:email], password: params[:password], password_confirmation: params[:password_confirmation])
   	if user.save
      session[:user_id] = user.id
+     new_signup_sms
      redirect to('/')
    else
      #flash.now[:errors] = user.errors.full_messages
@@ -84,7 +88,7 @@ class Makersbnb < Sinatra::Base
     request = Request.create(space_id: params[:space_id], check_in_date: params[:check_in_date], check_out_date: params[:check_out_date], request_status: 'pending', user_id: params[:user_id])
     if request.save
       redirect('/')
-    else 
+    else
       #flash.now[:errors] = ['The request was not created, please try again']
       redirect('/spaces/#{params[:space_id]}')
     end
