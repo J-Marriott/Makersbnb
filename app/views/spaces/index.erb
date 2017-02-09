@@ -1,9 +1,10 @@
-<ul id='spaces'>
-<%if @spaces%>
-  <% @spaces.each do |space| %>
-    <li>	<%= space.name %>
-        	<%=space.description%>
-    </li>
+
+<ul id="spaces">
+  <% if @spaces %>
+    <% @spaces.each do |space| %>
+      <li><a href='/spaces/<%=space.id%>'><%= space.name %> <%=space.description %></a>
+         </li>
+         <% end %>
   <% end %>
-  <% end%>
 </ul>
+
