@@ -44,7 +44,7 @@ feature 'display available spaces' do
     expect(page).to_not have_content('Vintage after date range')
   end
 
-  scenario 'user can enter a date range and return just one result - with stricter date test' do
+  scenario 'user can enter a date range and no property as the only available is booked by others in the range' do
     sign_up
     sign_in
     user = User.create(name: 'Vince', email: 'vince@example.com')
