@@ -47,6 +47,20 @@ class Makersbnb < Sinatra::Base
     end
   end
 
+  post '/spaces/filter' do
+    @first_night, @last_night= params[:first_night], params[:last_night]
+    guest_date_range = [*@first_night.to_s..@last_night.to_s]
+    @spaces = Space.all(:available_start_date.lte => @first_night, :available_end_date.gte => @last_night)
+    request_date_range = []
+    @spaces.each { |space|
+        requests = Request.all(space_id: space.id)
+        requests.each { |request|
+        request_date_range << [*request.check_in_date.to_s..(request.check_out_date - 1).to_s] }
+        @spaces.delete(space) if !(request_date_range.flatten & guest_date_range).empty?
+    }
+    erb :'spaces/index'
+  end
+
   get '/sessions/new' do
   	erb :'sessions/new'
   end
@@ -84,7 +98,7 @@ class Makersbnb < Sinatra::Base
     request = Request.create(space_id: params[:space_id], check_in_date: params[:check_in_date], check_out_date: params[:check_out_date], request_status: 'pending', user_id: params[:user_id])
     if request.save
       redirect('/')
-    else 
+    else
       #flash.now[:errors] = ['The request was not created, please try again']
       redirect('/spaces/#{params[:space_id]}')
     end

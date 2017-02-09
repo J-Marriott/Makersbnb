@@ -1,3 +1,13 @@
+<form method="post" action="/spaces/filter">
+
+<label for="first_night">first night</label>
+<input type="date" name="first_night">
+<label for="last_night">last night</label>
+<input type="date" name="last_night">
+<input type="submit" name="submit" value="submit">
+</form>
+
+Properties available from <%= @first_night %> to <%= @last_night %>
 
 <ul id="spaces">
   <% if @spaces %>
@@ -7,4 +17,3 @@
          <% end %>
   <% end %>
 </ul>
-
