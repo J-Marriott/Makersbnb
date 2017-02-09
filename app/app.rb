@@ -112,13 +112,18 @@ class Makersbnb < Sinatra::Base
     @userspaces.each do |userspace|
       @pendingrequests << userspace.requests
     end
+    @requests = Request.all(user_id: session[:user_id])
+    @myrequests = []
+    @requests.each do |request|
+      @myrequests << request
+    end
     erb :'requests/index'
   end
 
 
   post '/bookings' do
    request = Request.first(id: params[:requestid])
-   book = Booking.create(user_id: request.user_id, space_id: request.space_id, check_in_date: request.check_in_date, check_out_date: request.check_out_date)
+   request.update(request_status: params[:answer])
    redirect '/requests'
   end
 
