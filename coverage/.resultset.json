@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/matthewperry/Projects/makersbnb/makersbnb-matt/Makersbnb/app/app.rb": [
+
         1,
         null,
         1,
@@ -26,6 +26,7 @@
         12,
         null,
         null,
+        null,
         1,
         12,
         12,
@@ -37,7 +38,9 @@
         null,
         null,
         null,
+
         null,
+
         1,
         7,
         null,
@@ -93,9 +96,16 @@
         null,
         null,
         null,
+
         null
       ],
-      "/Users/matthewperry/Projects/makersbnb/makersbnb-matt/Makersbnb/app/data_mapper_setup.rb": [
+
+      "/Users/Jaycee/Dropbox/makers/wk6/Makersbnb/app/data_mapper_setup.rb": [
+
+        null,
+        null
+      ],
+
         1,
         1,
         1,
@@ -108,7 +118,7 @@
         1,
         1
       ],
-      "/Users/matthewperry/Projects/makersbnb/makersbnb-matt/Makersbnb/app/models/user.rb": [
+
         1,
         1,
         null,
@@ -153,7 +163,7 @@
         null,
         null
       ],
-      "/Users/matthewperry/Projects/makersbnb/makersbnb-matt/Makersbnb/app/models/space.rb": [
+
         1,
         1,
         null,
@@ -169,7 +179,6 @@
         null,
         null
       ],
-      "/Users/matthewperry/Projects/makersbnb/makersbnb-matt/Makersbnb/app/models/request.rb": [
         1,
         1,
         null,
@@ -182,7 +191,7 @@
         null,
         null
       ],
-      "/Users/matthewperry/Projects/makersbnb/makersbnb-matt/Makersbnb/app/models/booking.rb": [
+
         1,
         1,
         null,
@@ -194,7 +203,7 @@
         null,
         null
       ],
-      "/Users/matthewperry/Projects/makersbnb/makersbnb-matt/Makersbnb/spec/features/web_helper.rb": [
+
         1,
         null,
         null,
@@ -254,7 +263,7 @@
         null,
         null
       ],
-      "/Users/matthewperry/Projects/makersbnb/makersbnb-matt/Makersbnb/spec/features/homepage_spec.rb": [
+
         1,
         null,
         1,
@@ -264,7 +273,7 @@
         null,
         null
       ],
-      "/Users/matthewperry/Projects/makersbnb/makersbnb-matt/Makersbnb/spec/features/new_space_spec.rb": [
+
         1,
         null,
         1,
@@ -288,7 +297,6 @@
         null,
         null
       ],
-      "/Users/matthewperry/Projects/makersbnb/makersbnb-matt/Makersbnb/spec/features/space_lists_spec.rb": [
         1,
         null,
         1,
@@ -312,7 +320,7 @@
         null,
         null
       ],
-      "/Users/matthewperry/Projects/makersbnb/makersbnb-matt/Makersbnb/spec/features/user_sign_in_spec.rb": [
+
         1,
         null,
         1,
@@ -335,7 +343,7 @@
         null,
         null
       ],
-      "/Users/matthewperry/Projects/makersbnb/makersbnb-matt/Makersbnb/spec/features/user_sign_out_spec.rb": [
+
         1,
         null,
         1,
@@ -351,7 +359,7 @@
         null,
         null
       ],
-      "/Users/matthewperry/Projects/makersbnb/makersbnb-matt/Makersbnb/spec/features/user_sign_up_spec.rb": [
+
         1,
         null,
         1,
@@ -434,6 +442,6 @@
         null
       ]
     },
-    "timestamp": 1486643565
+
   }
 }

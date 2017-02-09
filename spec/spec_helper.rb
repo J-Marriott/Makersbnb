@@ -46,6 +46,7 @@ Capybara.app = Makersbnb
 RSpec.configure do |config|
   # Everything in this block runs once before all the tests run
 
+
   config.before(:each) do
     DatabaseCleaner.clean_with(:truncation)
     DatabaseCleaner.strategy = :transaction
@@ -64,9 +65,15 @@ RSpec.configure do |config|
     end
   end
 
+
     # config.before(:each) do
     #   DatabaseCleaner.start
     # end
+
+  # config.before(:each) do
+  #   DatabaseCleaner.start
+  # end
+
 
   config.append_after(:each) do
     DatabaseCleaner.clean

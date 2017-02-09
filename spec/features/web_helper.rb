@@ -33,6 +33,7 @@ def list_space(name: 'Bob\'s villa',
   click_button 'submit'
 end
 
+
 def request_setup
   sign_up
   sign_in
@@ -40,3 +41,10 @@ def request_setup
   user = User.create(name: 'Vince', email: 'vince@example.com')
   request = Request.create(check_in_date: '19/11/2017', check_out_date: '21/11/2017', request_status: 'pending', user_id: user.id, space_id: space.id)
 end
+
+def sign_out
+    sign_up
+    sign_in
+    click_button 'sign out'
+end
+
