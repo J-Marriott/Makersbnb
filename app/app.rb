@@ -50,7 +50,7 @@ class Makersbnb < Sinatra::Base
   post '/spaces/filter' do
     @first_night= params[:first_night]
     @last_night= params[:last_night]
-    redirect '/spaces'
+    erb :'spaces/index'
   end
 
   get '/sessions/new' do

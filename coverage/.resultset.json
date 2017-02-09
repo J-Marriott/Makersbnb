@@ -1,14 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-
-      "/Users/Jaycee/Dropbox/makers/wk6/Makersbnb/app/app.rb": [
-
-      "/Users/Mazza/Projects/makersbnbmaster/Makersbnb/app/app.rb": [
-
-
       "/Users/Mazza/Projects/Makersbnb/app/app.rb": [
-
         1,
         null,
         1,
@@ -23,53 +16,57 @@
         1,
         1,
         1,
-        57,
+        110,
+        null,
+        1,
+        20,
+        null,
+        null,
+        1,
+        18,
+        null,
+        null,
+        null,
+        1,
+        18,
+        18,
+        15,
+        15,
+        null,
+        null,
+        3,
+        null,
+        null,
         null,
         1,
         12,
         null,
         null,
         1,
-        11,
-        null,
-        null,
-        null,
-        1,
-        11,
-        11,
         9,
         9,
-        null,
-        null,
-        2,
-        null,
-        null,
-        null,
-
-        null,
-
-        1,
-        7,
-        null,
-        null,
-        1,
-        4,
-        4,
-        1,
+        6,
         null,
         3,
         null,
         null,
         null,
         1,
-        11,
+        1,
+        1,
+        1,
+        1,
         null,
         null,
         1,
-        9,
-        9,
-        7,
-        7,
+        18,
+        null,
+        null,
+        1,
+        16,
+        16,
+        14,
+        14,
         null,
         null,
         2,
@@ -77,13 +74,33 @@
         null,
         null,
         1,
-        1,
-        1,
+        2,
+        2,
         null,
         null,
         1,
-        10,
-        10,
+        29,
+        29,
+        null,
+        null,
+        1,
+        5,
+        5,
+        5,
+        null,
+        null,
+        1,
+        null,
+        5,
+        3,
+        3,
+        1,
+        null,
+        null,
+        2,
+        null,
+        null,
+        null,
         null,
         null,
         1,
@@ -95,19 +112,10 @@
         3,
         null,
         null,
-
+        null,
         null
       ],
-
-      "/Users/Jaycee/Dropbox/makers/wk6/Makersbnb/app/data_mapper_setup.rb": [
-
-        null,
-        null
-      ],
-      "/Users/Mazza/Projects/makersbnbmaster/Makersbnb/app/data_mapper_setup.rb": [
-
       "/Users/Mazza/Projects/Makersbnb/app/data_mapper_setup.rb": [
-
         1,
         1,
         1,
@@ -120,14 +128,7 @@
         1,
         1
       ],
-
-      "/Users/Jaycee/Dropbox/makers/wk6/Makersbnb/app/models/user.rb": [
-
-      "/Users/Mazza/Projects/makersbnbmaster/Makersbnb/app/models/user.rb": [
-
-
       "/Users/Mazza/Projects/Makersbnb/app/models/user.rb": [
-
         1,
         1,
         null,
@@ -150,13 +151,13 @@
         1,
         null,
         1,
-        11,
-        11,
+        18,
+        18,
         null,
         null,
         1,
-        9,
-        9,
+        16,
+        16,
         null,
         null,
         1,
@@ -172,13 +173,7 @@
         null,
         null
       ],
-
-      "/Users/Jaycee/Dropbox/makers/wk6/Makersbnb/app/models/space.rb": [
-
-      "/Users/Mazza/Projects/makersbnbmaster/Makersbnb/app/models/space.rb": [
-
       "/Users/Mazza/Projects/Makersbnb/app/models/space.rb": [
-
         1,
         1,
         null,
@@ -194,14 +189,7 @@
         null,
         null
       ],
-
-      "/Users/Jaycee/Dropbox/makers/wk6/Makersbnb/app/models/request.rb": [
-
-      "/Users/Mazza/Projects/makersbnbmaster/Makersbnb/app/models/request.rb": [
-
-
       "/Users/Mazza/Projects/Makersbnb/app/models/request.rb": [
-
         1,
         1,
         null,
@@ -214,13 +202,7 @@
         null,
         null
       ],
-
-      "/Users/Jaycee/Dropbox/makers/wk6/Makersbnb/app/models/booking.rb": [
-
-      "/Users/Mazza/Projects/makersbnbmaster/Makersbnb/app/models/booking.rb": [
-
       "/Users/Mazza/Projects/Makersbnb/app/models/booking.rb": [
-
         1,
         1,
         null,
@@ -232,31 +214,25 @@
         null,
         null
       ],
-
-      "/Users/Jaycee/Dropbox/makers/wk6/Makersbnb/spec/features/web_helper.rb": [
-
-      "/Users/Mazza/Projects/makersbnbmaster/Makersbnb/spec/features/web_helper.rb": [
-
       "/Users/Mazza/Projects/Makersbnb/spec/features/web_helper.rb": [
-
         1,
         null,
         null,
         null,
-        8,
-        8,
-        8,
-        8,
-        8,
-        8,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
         null,
         null,
         1,
         null,
-        9,
-        9,
-        9,
-        9,
+        16,
+        16,
+        16,
+        16,
         null,
         null,
         1,
@@ -264,20 +240,23 @@
         null,
         null,
         null,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
         null
       ],
-
-      "/Users/Jaycee/Dropbox/makers/wk6/Makersbnb/spec/features/homepage_spec.rb": [
-
-      "/Users/Mazza/Projects/makersbnbmaster/Makersbnb/spec/features/display_list_spaces_spec.rb": [
+      "/Users/Mazza/Projects/Makersbnb/spec/features/display_list_spaces_spec.rb": [
         1,
         null,
         1,
@@ -301,10 +280,26 @@
         null,
         null
       ],
-      "/Users/Mazza/Projects/makersbnbmaster/Makersbnb/spec/features/homepage_spec.rb": [
-
+      "/Users/Mazza/Projects/Makersbnb/spec/features/filter_available_spaces_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
       "/Users/Mazza/Projects/Makersbnb/spec/features/homepage_spec.rb": [
-
         1,
         null,
         1,
@@ -314,13 +309,7 @@
         null,
         null
       ],
-
-      "/Users/Jaycee/Dropbox/makers/wk6/Makersbnb/spec/features/new_space_spec.rb": [
-
-      "/Users/Mazza/Projects/makersbnbmaster/Makersbnb/spec/features/new_space_spec.rb": [
-
       "/Users/Mazza/Projects/Makersbnb/spec/features/new_space_spec.rb": [
-
         1,
         null,
         1,
@@ -344,11 +333,71 @@
         null,
         null
       ],
-
-      "/Users/Jaycee/Dropbox/makers/wk6/Makersbnb/spec/features/space_lists_spec.rb": [
-
+      "/Users/Mazza/Projects/Makersbnb/spec/features/request_hire_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
       "/Users/Mazza/Projects/Makersbnb/spec/features/space_lists_spec.rb": [
-
         1,
         null,
         1,
@@ -372,13 +421,7 @@
         null,
         null
       ],
-
-      "/Users/Jaycee/Dropbox/makers/wk6/Makersbnb/spec/features/user_sign_in_spec.rb": [
-
-      "/Users/Mazza/Projects/makersbnbmaster/Makersbnb/spec/features/user_sign_in_spec.rb": [
-
       "/Users/Mazza/Projects/Makersbnb/spec/features/user_sign_in_spec.rb": [
-
         1,
         null,
         1,
@@ -401,14 +444,7 @@
         null,
         null
       ],
-
-      "/Users/Jaycee/Dropbox/makers/wk6/Makersbnb/spec/features/user_sign_out_spec.rb": [
-
-      "/Users/Mazza/Projects/makersbnbmaster/Makersbnb/spec/features/user_sign_out_spec.rb": [
-
-
       "/Users/Mazza/Projects/Makersbnb/spec/features/user_sign_out_spec.rb": [
-
         1,
         null,
         1,
@@ -424,13 +460,7 @@
         null,
         null
       ],
-
-      "/Users/Jaycee/Dropbox/makers/wk6/Makersbnb/spec/features/user_sign_up_spec.rb": [
-
-      "/Users/Mazza/Projects/makersbnbmaster/Makersbnb/spec/features/user_sign_up_spec.rb": [
-
       "/Users/Mazza/Projects/Makersbnb/spec/features/user_sign_up_spec.rb": [
-
         1,
         null,
         1,
@@ -521,12 +551,6 @@
         null
       ]
     },
-
-    "timestamp": 1486566145
-
-    "timestamp": 1486563524
-
-    "timestamp": 1486633132
-
+    "timestamp": 1486652538
   }
 }

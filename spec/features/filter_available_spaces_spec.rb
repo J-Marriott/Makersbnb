@@ -11,7 +11,6 @@ feature 'display available spaces' do
     fill_in('first_night', with:'2017-04-01' )
     fill_in('last_night', with: '2017-06-30')
     click_on('submit')
-    #expect fields to contain first_night and last_night
-    expect(page).to have_content('first night last night Vintage before date range ')
+    expect(page).to have_content('Properties available from 2017-04-01 to 2017-06-30')
   end
 end
