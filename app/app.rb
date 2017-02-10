@@ -28,7 +28,7 @@ class Makersbnb < Sinatra::Base
   	user = User.create(name: params[:name], email: params[:email], password: params[:password], password_confirmation: params[:password_confirmation])
   	if user.save
      session[:user_id] = user.id
-     redirect to('/')
+     redirect to('/spaces')
    else
      flash.now[:errors] =['Sign up unsuccesful']
      erb :'users/new'
@@ -97,21 +97,19 @@ class Makersbnb < Sinatra::Base
 
   post '/requests' do
     if params[:check_in_date] >= params[:check_out_date]
-      redirect('/spaces/#{params[:space_id]}')
-      #flash.now[:errors] = ["Check in date is after the check in date"] and replace return 'p'
+      flash.next[:errors] = ["Check in date is after the check out date"]
+      redirect('/spaces/'+ params[:space_id])
+    elsif params[:check_in_date] < Space.first(:id=>params[:space_id]).available_start_date.to_s || params[:check_out_date] > Space.first(:id=>params[:space_id]).available_end_date.to_s
+        flash.next[:errors] = ["Check in and check out dates are out of booking date bound"]
+        redirect  ('/spaces/'+ params[:space_id])
     else
-      if params[:check_in_date] < Space.first(:id=>params[:space_id]).available_start_date.to_s || params[:check_out_date] > Space.first(:id=>params[:space_id]).available_end_date.to_s
-        flash.now[:errors] = ["Check in and check out dates are out of booking date bound"]
-        redirect  ('/spaces/#{params[:space_id]}')
-        else
         request = Request.create(space_id: params[:space_id], check_in_date: params[:check_in_date], check_out_date: params[:check_out_date], request_status: 'pending', user_id: params[:user_id])
         if request.save
-          redirect('/')
+          redirect('/requests')
         else
-            #flash.now[:errors] = ['The request was not created, please try again']
-            redirect('/spaces/#{params[:space_id]}')
+            flash.next[:errors] = ['The request was not created, please try again']
+            redirect('/spaces/' + params[:space_id])
           end
-      end
     end
   end
 

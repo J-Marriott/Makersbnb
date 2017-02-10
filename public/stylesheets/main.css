@@ -57,7 +57,7 @@ img{
 .request_made{
 }
 
-input[type='submit'] {
+input[type='submit'], .button {
 	background-color: #ed6b40;
 	border-radius: 5px;
 	padding: 0.5%;
