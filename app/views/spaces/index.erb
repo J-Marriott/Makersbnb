@@ -6,9 +6,9 @@
 <input type="date" name="last_night">
 <input type="submit" name="submit" value="submit">
 </form>
-
+<%if @first_night%>
 Properties available from <%= @first_night %> to <%= @last_night %>
-
+<%end%>
 <ul id="spaces">
   <% if @spaces %>
     <% @spaces.each do |space| %>
