@@ -13,6 +13,7 @@ class Makersbnb < Sinatra::Base
   use Rack::MethodOverride
   set :root, File.dirname(__FILE__) + ''
   set :views, Proc.new {File.join(root, "views")}
+  set :public_folder, 'public'
 
   get '/' do
     erb :homepage
