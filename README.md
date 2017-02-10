@@ -34,7 +34,7 @@ USER=# CREATE DATABASE makersbnb_test;
 
 ```
 App is hosted on Heroku  
-[link](http://example.com "Title")
+[link](https://byte-2-makersbnb.herokuapp.com/)
 
 ### User Stories
 
