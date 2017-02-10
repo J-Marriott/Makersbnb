@@ -5,9 +5,7 @@ feature 'display available spaces' do
     sign_up
     sign_in
     user = User.create(name: 'Vince', email: 'vince@example.com')
-    space = Space.create(name: 'Vintage before date range', description: 'Shabby chic flat in Mayfair', price: 50, available_start_date: '2017-01-01', available_end_date: '2017-03-31', user_id: 2)
-    space = Space.create(name: 'Vintage in date range', description: 'Shabby chic flat in Mayfair', price: 50, available_start_date: '2017-04-01', available_end_date: '2017-06-30', user_id: 2)
-    space = Space.create(name: 'Vintage after date range', description: 'Shabby chic flat in Mayfair', price: 50, available_start_date: '2017-07-01', available_end_date: '2017-12-31', user_id: 2)
+    create_sample_spaces
     fill_in('first_night', with:'2017-04-01' )
     fill_in('last_night', with: '2017-06-30')
     click_on('submit')
@@ -18,9 +16,7 @@ feature 'display available spaces' do
     sign_up
     sign_in
     user = User.create(name: 'Vince', email: 'vince@example.com')
-    space = Space.create(name: 'Vintage before date range', description: 'Shabby chic flat in Mayfair', price: 50, available_start_date: '2017-01-01', available_end_date: '2017-04-31', user_id: 2)
-    space = Space.create(name: 'Vintage in date range', description: 'Shabby chic flat in Mayfair', price: 50, available_start_date: '2017-04-01', available_end_date: '2017-04-30', user_id: 2)
-    space = Space.create(name: 'Vintage after date range', description: 'Shabby chic flat in Mayfair', price: 50, available_start_date: '2017-07-01', available_end_date: '2017-12-31', user_id: 2)
+    create_sample_spaces
     fill_in('first_night', with:'2017-04-02' )
     fill_in('last_night', with: '2017-04-11')
     click_on('submit')
@@ -33,9 +29,7 @@ feature 'display available spaces' do
     sign_up
     sign_in
     user = User.create(name: 'Vince', email: 'vince@example.com')
-    space = Space.create(name: 'Vintage before date range', description: 'Shabby chic flat in Mayfair', price: 50, available_start_date: '2017-04-01', available_end_date: '2017-04-10', user_id: 2)
-    space = Space.create(name: 'Vintage in date range', description: 'Shabby chic flat in Mayfair', price: 50, available_start_date: '2017-04-01', available_end_date: '2017-04-30', user_id: 2)
-    space = Space.create(name: 'Vintage after date range', description: 'Shabby chic flat in Mayfair', price: 50, available_start_date: '2017-04-07', available_end_date: '2017-04-09', user_id: 2)
+    create_sample_spaces
     fill_in('first_night', with:'2017-04-02' )
     fill_in('last_night', with: '2017-04-11')
     click_on('submit')
@@ -48,9 +42,7 @@ feature 'display available spaces' do
     sign_up
     sign_in
     user = User.create(name: 'Vince', email: 'vince@example.com')
-    space = Space.create(name: 'Vintage before date range', description: 'Shabby chic flat in Mayfair', price: 50, available_start_date: '2017-04-01', available_end_date: '2017-04-10', user_id: 2)
-    space = Space.create(name: 'Vintage in date range', description: 'Shabby chic flat in Mayfair', price: 50, available_start_date: '2017-04-01', available_end_date: '2017-04-30', user_id: 2)
-    space = Space.create(name: 'Vintage after date range', description: 'Shabby chic flat in Mayfair', price: 50, available_start_date: '2017-04-07', available_end_date: '2017-04-09', user_id: 2)
+    create_sample_spaces
     request = Request.create(user_id: 3, space_id: 2, check_in_date: '2017-04-03', check_out_date: '2017-04-07', request_status: 'confirmed')
     request = Request.create(user_id: 3, space_id: 2, check_in_date: '2017-04-08', check_out_date: '2017-04-09', request_status: 'confirmed')
     fill_in('first_night', with:'2017-04-02' )
@@ -65,9 +57,7 @@ feature 'display available spaces' do
     sign_up
     sign_in
     user = User.create(name: 'Vince', email: 'vince@example.com')
-    space = Space.create(name: 'Vintage before date range', description: 'Shabby chic flat in Mayfair', price: 50, available_start_date: '2017-04-01', available_end_date: '2017-04-10', user_id: 2)
-    space = Space.create(name: 'Vintage in date range', description: 'Shabby chic flat in Mayfair', price: 50, available_start_date: '2017-04-01', available_end_date: '2017-04-30', user_id: 2)
-    space = Space.create(name: 'Vintage after date range', description: 'Shabby chic flat in Mayfair', price: 50, available_start_date: '2017-04-07', available_end_date: '2017-04-09', user_id: 2)
+    create_sample_spaces
     space = Space.create(name: 'Within date range', description: 'Shabby chic flat in Mayfair', price: 50, available_start_date: '2017-04-01', available_end_date: '2017-04-14', user_id: 2)
     request = Request.create(user_id: 3, space_id: 2, check_in_date: '2017-04-03', check_out_date: '2017-04-07', request_status: 'confirmed')
     request = Request.create(user_id: 3, space_id: 2, check_in_date: '2017-04-08', check_out_date: '2017-04-09', request_status: 'confirmed')

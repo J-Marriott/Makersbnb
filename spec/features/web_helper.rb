@@ -48,3 +48,8 @@ def sign_out
     click_button 'sign out'
 end
 
+def create_sample_spaces
+  space = Space.create(name: 'Vintage before date range', description: 'Shabby chic flat in Mayfair', price: 50, available_start_date: '2017-01-01', available_end_date: '2017-03-31', user_id: 2)
+  space = Space.create(name: 'Vintage in date range', description: 'Shabby chic flat in Mayfair', price: 50, available_start_date: '2017-04-01', available_end_date: '2017-06-30', user_id: 2)
+  space = Space.create(name: 'Vintage after date range', description: 'Shabby chic flat in Mayfair', price: 50, available_start_date: '2017-07-01', available_end_date: '2017-12-31', user_id: 2)
+end
