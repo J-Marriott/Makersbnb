@@ -29,7 +29,7 @@ class Makersbnb < Sinatra::Base
      session[:user_id] = user.id
      redirect to('/')
    else
-     #flash.now[:errors] = user.errors.full_messages to indicate sign up unsuccesful
+     flash.now[:errors] =['Sign up unsuccesful'] 
      erb :'users/new'
    end
   end
