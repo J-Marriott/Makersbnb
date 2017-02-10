@@ -16,6 +16,23 @@ A clone project of Airbnb
 6. Encouraging constructive feedback
 7. Nurturing transparency within the team
 
+##Domain Model
+
+![Domain Model][logo]
+[logo]:https://github.com/herecomesjaycee/Makersbnb/blob/master/MakersBnB.png
+
+##Installation
+
+Install postgreSQL database
+```
+psql
+psql (9.6.1)
+Type "help" for help.
+
+USER=# CREATE DATABASE makersbnb_development;
+USER=# CREATE DATABASE makersbnb_test;
+
+```
 
 ##User Stories
 
