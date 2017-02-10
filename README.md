@@ -1,7 +1,7 @@
-#Makersbnb
+## Makersbnb
 A clone project of Airbnb
 
-##Collaborators
+### Collaborators
 - [Jaycee Cheong](https://github.com/herecomesjaycee)
 - [Olwen Davies](https://github.com/olwend)
 - [Joe Marriott](https://github.com/J-Marriott)
@@ -16,9 +16,27 @@ A clone project of Airbnb
 6. Encouraging constructive feedback
 7. Nurturing transparency within the team
 
+### Domain Model
 
-##User Stories
+![Domain Model][logo]
+[logo]:MakersBnB.png
 
+### Installation
+
+Install postgreSQL database
+```
+psql
+psql (9.6.1)
+Type "help" for help.
+
+USER=# CREATE DATABASE makersbnb_development;
+USER=# CREATE DATABASE makersbnb_test;
+
+```
+App is hosted on Heroku  
+[link](https://byte-2-makersbnb.herokuapp.com/)
+
+### User Stories
 
 ```
 As a user,
