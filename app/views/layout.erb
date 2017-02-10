@@ -5,6 +5,7 @@
     <title>Makers BnB</title>
   </head>
   <body>
+
     <% if flash[:notice] %>
     <div id='notice'><%= flash[:notice] %></div>
     <% end %>
@@ -12,9 +13,16 @@
     <% if session[:user_id] %>
       <form method='post' action='/sessions'>
         <input type="hidden" name="_method" value="delete">
-        <input type="submit" name='sign out' value="sign out">
+        <input type="submit" name='sign out' value="sign out" style="float:left;">
       </form>
+      <a href="/spaces" class="button" style="float:left;">See all Spaces</a>
+      <a href="/spaces/new" class="button" style="float:right;">List A Space</a>
+      <% else%>
+     <a href="/users/new" class="button" style="float:left;">Sign up</a>
+      <a href="/sessions/new" class="button" style="float:right;">Log In</a>
     <% end %>
+
+
 
     <% if flash[:errors] && !flash[:errors].empty? %>
       Please refer to the following errors below:
