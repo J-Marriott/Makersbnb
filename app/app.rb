@@ -29,7 +29,7 @@ class Makersbnb < Sinatra::Base
      session[:user_id] = user.id
      redirect to('/')
    else
-     #flash.now[:errors] = user.errors.full_messages
+     #flash.now[:errors] = user.errors.full_messages to indicate sign up unsuccesful
      erb :'users/new'
    end
   end
@@ -43,6 +43,7 @@ class Makersbnb < Sinatra::Base
     if space.save
       redirect '/spaces'
     else
+    #flash to say log in to create a space
       redirect '/spaces/new'
     end
   end
@@ -78,6 +79,7 @@ class Makersbnb < Sinatra::Base
 
   delete '/sessions' do
     session[:user_id] = nil
+    #flash.now you have signed out
     redirect '/'
   end
 
