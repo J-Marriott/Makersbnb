@@ -85,16 +85,18 @@ feature 'display available spaces' do
     sign_in
     user = User.create(name: 'Vince', email: 'vince@example.com')
     100.times do
-    space = Space.create(name: 'Vintage before date range', description: 'Shabby chic flat in Mayfair', price: 50, available_start_date: '2017-04-01', available_end_date: '2017-04-10', user_id: 2)
+    space = Space.create(name: 'Vintage before date range', description: 'Shabby chic flat in Mayfair', price: 50, available_start_date: '2017-04-01', available_end_date: '2017-04-20', user_id: 2)
     end
     request = Request.create(user_id: 3, space_id: 2, check_in_date: '2017-04-03', check_out_date: '2017-04-07', request_status: 'confirmed')
-    request = Request.create(user_id: 3, space_id: 2, check_in_date: '2017-04-08', check_out_date: '2017-04-09', request_status: 'confirmed')
+    request = Request.create(user_id: 3, space_id: 92, check_in_date: '2017-04-08', check_out_date: '2017-04-09', request_status: 'confirmed')
     fill_in('first_night', with:'2017-04-02' )
     fill_in('last_night', with: '2017-04-11')
     click_on('submit')
-    expect(page).to_not have_content('Vintage in date range')
     expect(page).to_not have_content('Vintage before data range')
-    expect(page).to_not have_content('Vintage after date range')
+    fill_in('first_night', with:'2017-04-10' )
+    fill_in('last_night', with: '2017-04-15')
+    click_on('submit')
+    expect(page).to have_content('Vintage before date range')
   end
 
 
