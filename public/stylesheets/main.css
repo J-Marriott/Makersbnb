@@ -65,10 +65,20 @@ input[type='submit'] {
 	color: white;
 }
 
-input[type='date'], input[type='text'], input[type='email'], input[type='password']{
+input[type='date'], input[type='text'], input[type='email'], input[type='password'], #price{
 	border:2px solid white;
 	border-radius:2px;
 	height: 30px;
 	width: 180px;
 	margin: 20px;
+	display: inline-block;
+	float: center;
+}
+
+label {
+	display: inline-block;
+	float: center;
+	clear left;
+	width: 100px;
+	text-align: right;
 }
