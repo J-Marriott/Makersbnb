@@ -21,6 +21,7 @@ require_relative '../spec_helper.rb'
 				fill_in('name', with: 'Bill')
 				click_button('Submit')
 				expect(User.first).to eq(nil)
+				expect(page).to have_content 'Sign up unsuccesful'
 			end
 
 scenario 'User account is not created passwords not matching' do

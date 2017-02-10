@@ -13,10 +13,15 @@ feature 'adding new space' do
     sign_up
     sign_in
     list_space(price: 'Bob\'s Villa')
-    expect(page.current_path).to eq '/spaces/new'
+    expect(page).to have_content 'Your space was not listed'
     list_space(available_start_date: 'Bob\'s Villa')
-    expect(page.current_path).to eq '/spaces/new'
+    expect(page).to have_content 'Your space was not listed'
     list_space(available_end_date: 1000)
-    expect(page.current_path).to eq '/spaces/new'
+    expect(page).to have_content 'Your space was not listed'
+  end
+
+  scenario 'user cannot list a space if not signed in' do
+    list_space
+    expect(page).to have_content 'Your space was not listed'
   end
 end
