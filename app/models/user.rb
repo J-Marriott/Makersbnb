@@ -8,7 +8,6 @@ class User
 
   has n, :spaces
   has n, :requests
-  has n, :bookings
   property :id, Serial
   property :name, String
   property :email, String, required: true, unique: true
