@@ -13,6 +13,7 @@ class Makersbnb < Sinatra::Base
   use Rack::MethodOverride
   set :root, File.dirname(__FILE__) + ''
   set :views, Proc.new {File.join(root, "views")}
+  set :public_folder, 'public'
 
   get '/' do
     erb :homepage
@@ -93,16 +94,20 @@ class Makersbnb < Sinatra::Base
   end
 
   post '/requests' do
-    #flash.now[:errors] = ["Check in and check out dates are out of booking date bound"] and replace return 'p'
-    return 'p' if params[:check_in_date] < Space.first(:id=>params[:space_id]).available_start_date.to_s || params[:check_out_date] > Space.first(:id=>params[:space_id]).available_end_date.to_s
-    request = Request.create(space_id: params[:space_id], check_in_date: params[:check_in_date], check_out_date: params[:check_out_date], request_status: 'pending', user_id: params[:user_id])
-    if request.save
-      redirect('/')
-    else
-      #flash.now[:errors] = ['The request was not created, please try again']
+    if params[:check_in_date] >= params[:check_out_date]
       redirect('/spaces/#{params[:space_id]}')
-    end
-
+      #flash.now[:errors] = ["Check in date is after the check in date"] and replace return 'p'
+    else
+      #flash.now[:errors] = ["Check in and check out dates are out of booking date bound"] and replace return 'p'
+      return 'p' if params[:check_in_date] < Space.first(:id=>params[:space_id]).available_start_date.to_s || params[:check_out_date] > Space.first(:id=>params[:space_id]).available_end_date.to_s
+      request = Request.create(space_id: params[:space_id], check_in_date: params[:check_in_date], check_out_date: params[:check_out_date], request_status: 'pending', user_id: params[:user_id])
+        if request.save
+          redirect('/')
+        else
+            #flash.now[:errors] = ['The request was not created, please try again']
+      redirect('/spaces/#{params[:space_id]}')
+        end
+      end
   end
 
 

@@ -59,4 +59,16 @@ feature 'hire space request' do
     expect(Request.all).to be_empty
     end
 
+    scenario 'cannot create a request if the check out date is before the check in date' do
+      sign_up
+      sign_in
+      list_space(name: 'Lucy villa', description: 'A lovely villa', price: 10000, available_start_date: '19/06/2017', available_end_date: '25/07/2017')
+      visit ('/spaces')
+      click_link('Lucy villa A lovely villa')
+      fill_in('check_in_date', with: '2017-07-02')
+      fill_in('check_out_date', with: '2017-07-01')
+      click_button('Confirm')
+      expect(Request.all).to be_empty
+    end
+
 end

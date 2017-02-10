@@ -1,13 +1,21 @@
+<h1>List A Space</h1>
+<div class="container">
 <form method="post" action="/spaces">
 <label for="name">Name</label>
-<input type="text" name="name">
+<input type="text" placeholder="Keep it snappy" name="name" maxlength="50">
+<br>
 <label for="description">Description</label>
-<input type="text" name="description">
+<input type="text" name="description" placeholder="It's a lovely place..." maxlength="255" required>
+<br>
 <label for="price">Price</label>
-<input type="text" name="price">
-<label for="available_start_date">available start date</label>
+<input type="number" id="price" min="1" step"1" placeholder="£" name="price">
+<br>
+<label for="available_start_date">Available start date</label>
 <input type="date" name="available_start_date">
-<label for="available_end_date">available end date</label>
-<input type="date" name="available_end_date">
+<br>
+<label for="available_end_date">Available end date</label>
+
+<input type="date" name="available_end_date"><br>
 <input type="submit" name="submit" value="submit">
 </form>
+</div>
