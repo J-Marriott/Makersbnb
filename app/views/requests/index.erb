@@ -1,4 +1,5 @@
-<div>
+
+<div class="received">
 <h2>Requests I've received</h2>
 <ul id='requests' class="listing">
 
@@ -6,15 +7,13 @@
   <% @pendingrequests.each do |singlerequest| %>
   <% singlerequest.each do |request| %>
 
-    <li>	<%= request.id %>
-          <%= request.check_in_date %>
-        	<%= request.check_out_date%>
-          <%  space = Space.get(request.space_id) %>
-          <%= space.name %>
-          <%  hirer = User.get(request.user_id) %>
-          <%=  hirer.name %> <br>
-
-
+    <li> Request Reference: <%= request.id %> <br>
+          Check in date: <%= request.check_in_date %> <br>
+          Check out date: <%= request.check_out_date%> <br>
+          Space: <%  space = Space.get(request.space_id) %>
+          <%= space.name %><br>
+          Hirer's name: <%  hirer = User.get(request.user_id) %>
+          <%=  hirer.name %> 
 
           <form action='/bookings' method='post'>
             <input type='hidden' name="answer" value="confirmed">
@@ -35,7 +34,7 @@
 </ul>
 </div>
 
-<div>
+<div class="made">
 <h2>Requests I've made</h2>
 <ul id='requests_made' class="listing" >
 
@@ -43,16 +42,21 @@
   <% @myrequests.each do |request| %>
 
 
-    <li>  <%= request.id %>
-          <%= request.check_in_date %>
-          <%= request.check_out_date%>
-          <%  space = Space.get(request.space_id) %>
-          <%= space.name %>
-          <%= request.request_status %> <br>
-
+    <li>  Request Reference: <%= request.id %>
+            <br>
+            Check in date: <%= request.check_in_date %>
+            <br>
+            Check out date: <%= request.check_out_date%>
+            <br>
+            Space: <%  space = Space.get(request.space_id) %>
+              <%= space.name %>
+            <br>
+            Status: <%= request.request_status %>
     </li>
 
   <% end %>
   <% end%>
 </ul>
 </div>
+
+

@@ -1,0 +1,74 @@
+body {
+	text-align: center;
+	font-family: futura;
+	background-color: #fcfaef;
+}
+
+br {
+	line-height: 200%;
+}
+
+ul {
+	list-style-type: none;;
+}
+
+li {
+	margin: 10%;
+	padding: 5%;
+	background-color: white;
+	border-radius: 4px;
+	box-shadow: 5px 5px 3px #d1cfcf;}
+
+a {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+form{
+	margin: 2%;
+	padding: 2%;
+}
+/*
+img{
+	width: 80%;
+	height: inherit;
+	border-radius: 10px;
+}
+
+*/
+.homepage {
+	color: #fcfaef;
+}
+
+.received {
+	float: right;
+	width: 50%;
+}
+
+.made {
+	float: left;
+	width: 50%;
+}
+
+.request {
+
+}
+
+.request_made{
+}
+
+input[type='submit'] {
+	background-color: #ed6b40;
+	border-radius: 5px;
+	padding: 0.5%;
+	border: none;
+	color: white;
+}
+
+input[type='date'], input[type='text'], input[type='email'], input[type='password']{
+	border:2px solid white;
+	border-radius:2px;
+	height: 30px;
+	width: 180px;
+	margin: 20px;
+}
