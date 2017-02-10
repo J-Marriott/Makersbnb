@@ -4,6 +4,10 @@
     <title>Makers BnB</title>
   </head>
   <body>
+    <% if flash[:notice] %>
+    <div id='notice'><%= flash[:notice] %></div>
+    <% end %>
+
     <% if session[:user_id] %>
       <form method='post' action='/sessions'>
         <input type="hidden" name="_method" value="delete">

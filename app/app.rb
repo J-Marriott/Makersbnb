@@ -29,7 +29,7 @@ class Makersbnb < Sinatra::Base
      session[:user_id] = user.id
      redirect to('/')
    else
-     flash.now[:errors] =['Sign up unsuccesful'] 
+     flash.now[:errors] =['Sign up unsuccesful']
      erb :'users/new'
    end
   end
@@ -43,8 +43,8 @@ class Makersbnb < Sinatra::Base
     if space.save
       redirect '/spaces'
     else
-    #flash to say log in to create a space
-      redirect '/spaces/new'
+      flash.now[:errors] = ["Your space was not listed"]
+      erb :'spaces/new'
     end
   end
 
@@ -72,14 +72,14 @@ class Makersbnb < Sinatra::Base
      session[:user_id] = user.id
      redirect to('/spaces')
    else
-     #flash.now[:errors] = ['The email or password is incorrect']
-    redirect to ('/sessions/new')
+    flash.now[:errors] = ['User name or password was incorrect']
+    erb :'sessions/new'
    end
   end
 
   delete '/sessions' do
     session[:user_id] = nil
-    #flash.now you have signed out
+    flash.keep[:notice] = "You have now signed out"
     redirect '/'
   end
 
@@ -99,16 +99,19 @@ class Makersbnb < Sinatra::Base
       redirect('/spaces/#{params[:space_id]}')
       #flash.now[:errors] = ["Check in date is after the check in date"] and replace return 'p'
     else
-      #flash.now[:errors] = ["Check in and check out dates are out of booking date bound"] and replace return 'p'
-      return 'p' if params[:check_in_date] < Space.first(:id=>params[:space_id]).available_start_date.to_s || params[:check_out_date] > Space.first(:id=>params[:space_id]).available_end_date.to_s
-      request = Request.create(space_id: params[:space_id], check_in_date: params[:check_in_date], check_out_date: params[:check_out_date], request_status: 'pending', user_id: params[:user_id])
+      if params[:check_in_date] < Space.first(:id=>params[:space_id]).available_start_date.to_s || params[:check_out_date] > Space.first(:id=>params[:space_id]).available_end_date.to_s
+        flash.now[:errors] = ["Check in and check out dates are out of booking date bound"]
+        redirect  ('/spaces/#{params[:space_id]}')
+        else
+        request = Request.create(space_id: params[:space_id], check_in_date: params[:check_in_date], check_out_date: params[:check_out_date], request_status: 'pending', user_id: params[:user_id])
         if request.save
           redirect('/')
         else
             #flash.now[:errors] = ['The request was not created, please try again']
-      redirect('/spaces/#{params[:space_id]}')
-        end
+            redirect('/spaces/#{params[:space_id]}')
+          end
       end
+    end
   end
 
 
